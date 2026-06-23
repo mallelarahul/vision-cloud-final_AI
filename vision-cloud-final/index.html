@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vision Cloud - Enterprise IT Consulting. Cloud Infrastructure, Cybersecurity, AI & Automation solutions for modern businesses.">
+    <meta property="og:title" content="Vision Cloud - Enterprise IT Consulting">
+    <meta property="og:description" content="Scale Smarter. Secure Faster. Stay Ahead. 500+ enterprises trust Vision Cloud.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#1a1410">
+    <title>Vision Cloud - Enterprise IT Consulting Platform</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-logo">☁️ Vision Cloud</div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        <div class="loader-text">LOADING ENTERPRISE PLATFORM...</div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-wrapper">
+            <a href="#" class="logo">
+                Vision Cloud
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34" style="filter:drop-shadow(0 0 5px rgba(217,119,6,0.5))">
+                    <defs><linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d97706"/><stop offset="50%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#f43f5e"/></linearGradient></defs>
+                    <path d="M48 37a9 9 0 0 0-1.5-17.9A13 13 0 0 0 22 26a7.5 7.5 0 0 0 1.5 14.8" fill="none" stroke="url(#cg)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M23 42h20" stroke="url(#cg)" stroke-width="3" stroke-linecap="round"/>
+                    <ellipse cx="34" cy="32" rx="6" ry="4.5" fill="none" stroke="url(#cg)" stroke-width="2.2"/>
+                    <circle cx="34" cy="32" r="2" fill="url(#cg)"/>
+                    <path d="M52 19 a3.5 3.5 0 0 1 0 5.5" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85"/>
+                    <path d="M55.5 16 a7 7 0 0 1 0 11" stroke="#f59e0b" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+            </a>
+            <nav id="desktopNav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"></button>
+                <button class="btn-nav" onclick="openLoginModal()">Login</button>
+            </nav>
+            <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" onclick="closeMobileNav()">About</a>
+            <a href="#services" onclick="closeMobileNav()">Services</a>
+            <a href="#features" onclick="closeMobileNav()">Features</a>
+            <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+            <a href="#clients" onclick="closeMobileNav()">Clients</a>
+            <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+            <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+            <a href="#contact-section" onclick="closeMobileNav()">Contact Us</a>
+            <button onclick="closeMobileNav(); openLoginModal()">Login</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Scale Smarter. Secure Faster. Stay Ahead.</h1>
+                <p>End-to-end IT solutions trusted by 500+ enterprises. Cloud infrastructure, cybersecurity, and AI automation — all in one platform.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth'})">Get Started →</button>
+                    <button class="btn-secondary" onclick="openContactModal()">Book a Free Consultation</button>
+                </div>
+            </div>
+            <div><div class="hero-visual">☁️</div></div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item scroll-reveal"><h3>500+</h3><p>Enterprise Clients</p></div>
+            <div class="stat-item scroll-reveal"><h3>99.9%</h3><p>Uptime SLA</p></div>
+            <div class="stat-item scroll-reveal"><h3>2M+</h3><p>Data Points Daily</p></div>
+            <div class="stat-item scroll-reveal"><h3>24/7</h3><p>Expert Support</p></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-text scroll-reveal">
+                <h2>Who We Are</h2>
+                <p>Vision Cloud is a premier enterprise IT consulting firm headquartered in Frisco, Texas. With over a decade of experience, we help businesses modernize their technology stack, secure their digital assets, and harness the power of AI and cloud computing.</p>
+                <p>Our team of certified IT professionals brings deep expertise across cloud platforms, cybersecurity frameworks, and enterprise software — delivering measurable ROI for every engagement.</p>
+                <div class="about-badges">
+                    <div class="about-badge">🏆 ISO 27001 Certified</div>
+                    <div class="about-badge">☁️ AWS Partner</div>
+                    <div class="about-badge">🔷 Microsoft Gold</div>
+                    <div class="about-badge">🔒 SOC 2 Compliant</div>
+                    <div class="about-badge">🤖 AI Ready</div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-stat-card scroll-reveal"><h3>10+</h3><p>Years Experience</p></div>
+                <div class="about-stat-card scroll-reveal"><h3>50+</h3><p>Certified Experts</p></div>
+                <div class="about-stat-card scroll-reveal"><h3>15+</h3><p>Countries Served</p></div>
+                <div class="about-stat-card scroll-reveal"><h3>98%</h3><p>Client Retention</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Comprehensive Services</h2>
+            <p>Industry-leading IT consulting solutions designed to modernize your infrastructure and accelerate business growth</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card scroll-reveal"><div class="service-icon">☁️</div><h3>Cloud Infrastructure</h3><p>Scalable cloud hosting, server management, and 99.9% uptime monitoring for enterprise workloads.</p></div>
+            <div class="service-card scroll-reveal"><div class="service-icon">🔒</div><h3>Cybersecurity</h3><p>Advanced threat detection, firewall management, and end-to-end data protection for your business.</p></div>
+            <div class="service-card scroll-reveal"><div class="service-icon">🤖</div><h3>AI & Automation</h3><p>Intelligent workflow automation, AI integrations, and smart analytics to accelerate productivity.</p></div>
+            <div class="service-card scroll-reveal"><div class="service-icon">🛠️</div><h3>IT Support & Helpdesk</h3><p>24/7 technical support, remote assistance, and rapid issue resolution for your entire team.</p></div>
+            <div class="service-card scroll-reveal"><div class="service-icon">🌐</div><h3>Network Management</h3><p>VPN setup, LAN/WAN configuration, bandwidth optimization, and real-time network monitoring.</p></div>
+            <div class="service-card scroll-reveal"><div class="service-icon">📊</div><h3>Data Analytics</h3><p>Business intelligence dashboards, custom reporting, and actionable data insights for smarter decisions.</p></div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="features-content">
+            <div class="section-header"><h2>Why Choose Vision Cloud?</h2><p>Trusted IT consulting partner for modern enterprises</p></div>
+            <div class="features-grid">
+                <div><div class="feature-visual">📱</div></div>
+                <div class="features-text">
+                    <div class="features-list">
+                        <div class="feature-item scroll-reveal"><div class="feature-check">✓</div><div><h3>Expert IT Consultants</h3><p>Certified professionals with 10+ years experience across cloud, security, and enterprise infrastructure.</p></div></div>
+                        <div class="feature-item scroll-reveal"><div class="feature-check">✓</div><div><h3>Cloud-First Architecture</h3><p>Modern cloud infrastructure designed for performance, security, and long-term cost efficiency.</p></div></div>
+                        <div class="feature-item scroll-reveal"><div class="feature-check">✓</div><div><h3>AI-Powered Insights</h3><p>Real-time analytics and intelligent automation to drive smarter, faster business decisions.</p></div></div>
+                        <div class="feature-item scroll-reveal"><div class="feature-check">✓</div><div><h3>24/7 Managed Support</h3><p>Round-the-clock monitoring, incident response, and dedicated account management for your team.</p></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-download scroll-reveal">
+                <h2>Download Our Mobile App</h2>
+                <p>Access your workspace anywhere, anytime</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">▶ Google Play</a>
+                    <a href="#" class="app-btn">🍎 Apple App Store</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="case-studies" id="portfolio">
+        <div class="section-header"><h2>Case Studies</h2><p>Real results for real businesses</p></div>
+        <div class="case-grid">
+            <div class="case-card scroll-reveal">
+                <div class="case-image" style="background:linear-gradient(135deg,rgba(217,119,6,0.15),rgba(244,63,94,0.08))">
+                    <span class="case-tag">Cloud Migration</span>☁️
+                </div>
+                <div class="case-body">
+                    <h3>FinTech Giant Migrates to AWS</h3>
+                    <p>Migrated a 500-person financial services firm from on-premise infrastructure to a fully managed AWS environment.</p>
+                    <div class="case-metrics">
+                        <div class="case-metric"><h4>60%</h4><p>Cost Reduction</p></div>
+                        <div class="case-metric"><h4>99.99%</h4><p>Uptime Achieved</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-card scroll-reveal">
+                <div class="case-image" style="background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(217,119,6,0.08))">
+                    <span class="case-tag">Cybersecurity</span>🔒
+                </div>
+                <div class="case-body">
+                    <h3>Healthcare Provider Security Overhaul</h3>
+                    <p>Implemented enterprise-grade zero-trust security architecture for a regional healthcare network with 2,000+ endpoints.</p>
+                    <div class="case-metrics">
+                        <div class="case-metric"><h4>0</h4><p>Breaches Post-Deploy</p></div>
+                        <div class="case-metric"><h4>HIPAA</h4><p>Fully Compliant</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-card scroll-reveal">
+                <div class="case-image" style="background:linear-gradient(135deg,rgba(99,102,241,0.15),rgba(217,119,6,0.08))">
+                    <span class="case-tag">AI Automation</span>🤖
+                </div>
+                <div class="case-body">
+                    <h3>Retail Chain AI Transformation</h3>
+                    <p>Built an AI-powered inventory and demand forecasting system for a 200-store retail chain, replacing manual processes.</p>
+                    <div class="case-metrics">
+                        <div class="case-metric"><h4>40%</h4><p>Efficiency Gain</p></div>
+                        <div class="case-metric"><h4>$2M+</h4><p>Annual Savings</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+        <div class="section-header"><h2>Simple, Transparent Pricing</h2><p>Choose the plan that fits your business needs</p></div>
+        <div class="pricing-grid">
+            <div class="pricing-card scroll-reveal">
+                <div class="pricing-icon">🚀</div>
+                <h3>Starter</h3>
+                <div class="price">$49<span>/mo</span></div>
+                <p class="pricing-desc">Perfect for small businesses getting started with IT consulting</p>
+                <ul class="pricing-features">
+                    <li>Cloud setup & migration</li>
+                    <li>Basic cybersecurity audit</li>
+                    <li>5 user helpdesk support</li>
+                    <li>Monthly reports</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="pricing-btn" onclick="openContactModal()">Get Started</button>
+            </div>
+            <div class="pricing-card popular scroll-reveal">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-icon">⚡</div>
+                <h3>Professional</h3>
+                <div class="price">$99<span>/mo</span></div>
+                <p class="pricing-desc">Ideal for growing businesses needing comprehensive IT support</p>
+                <ul class="pricing-features">
+                    <li>Everything in Starter</li>
+                    <li>Advanced threat detection</li>
+                    <li>25 user helpdesk support</li>
+                    <li>AI-powered analytics</li>
+                    <li>Network management</li>
+                    <li>24/7 phone support</li>
+                    <li>Weekly reports</li>
+                </ul>
+                <button class="pricing-btn filled" onclick="openContactModal()">Get Started</button>
+            </div>
+            <div class="pricing-card scroll-reveal">
+                <div class="pricing-icon">🏢</div>
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <p class="pricing-desc">Full-scale IT consulting for large enterprises with complex needs</p>
+                <ul class="pricing-features">
+                    <li>Everything in Professional</li>
+                    <li>Dedicated account manager</li>
+                    <li>Unlimited users</li>
+                    <li>Custom AI solutions</li>
+                    <li>On-site consulting</li>
+                    <li>SLA guarantee</li>
+                    <li>Daily reports & reviews</li>
+                </ul>
+                <button class="pricing-btn" onclick="openContactModal()">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="clients" id="clients">
+        <div class="clients-container">
+            <h2>Trusted by Industry Leaders</h2>
+            <p class="clients-subtitle">Join 500+ enterprise clients relying on Vision Cloud</p>
+            <div class="carousel-wrapper">
+                <div class="carousel-inner">
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#4285f4,#1f2937);font-size:1.3rem">G</div><div class="client-name">Google</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#00a4ef,#7fba00);font-size:1.2rem">MS</div><div class="client-name">Microsoft</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#1877f2,#e7f3ff);color:#1877f2;font-size:1.2rem">f</div><div class="client-name">Meta</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#0071ce,#ffc220);color:#003;font-size:1.2rem">W</div><div class="client-name">Walmart</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#052c65,#e81b23);font-size:1rem">IBM</div><div class="client-name">IBM</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#ff9900,#146eb4);font-size:1.3rem">A</div><div class="client-name">Amazon</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#111,#555);font-size:1.3rem">🍎</div><div class="client-name">Apple</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#e60012,#f00);font-size:1.3rem">N</div><div class="client-name">Netflix</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#003da5,#06c);font-size:1.2rem">I</div><div class="client-name">Intel</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#f55,#ffc300);color:#000;font-size:0.85rem">ORA</div><div class="client-name">Oracle</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#00467f,#a5cc82);font-size:1rem">SF</div><div class="client-name">Salesforce</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#0066cc,#003366);font-size:0.85rem">JPM</div><div class="client-name">JPMorgan</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#1f2937,#374151);font-size:1rem">GS</div><div class="client-name">Goldman</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#003f5c,#00d4ff);font-size:0.85rem">BLK</div><div class="client-name">BlackRock</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#4285f4,#1f2937);font-size:1.3rem">G</div><div class="client-name">Google</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#00a4ef,#7fba00);font-size:1.2rem">MS</div><div class="client-name">Microsoft</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#1877f2,#e7f3ff);color:#1877f2;font-size:1.2rem">f</div><div class="client-name">Meta</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#0071ce,#ffc220);color:#003;font-size:1.2rem">W</div><div class="client-name">Walmart</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#052c65,#e81b23);font-size:1rem">IBM</div><div class="client-name">IBM</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#ff9900,#146eb4);font-size:1.3rem">A</div><div class="client-name">Amazon</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#111,#555);font-size:1.3rem">🍎</div><div class="client-name">Apple</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#e60012,#f00);font-size:1.3rem">N</div><div class="client-name">Netflix</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#003da5,#06c);font-size:1.2rem">I</div><div class="client-name">Intel</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#f55,#ffc300);color:#000;font-size:0.85rem">ORA</div><div class="client-name">Oracle</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#00467f,#a5cc82);font-size:1rem">SF</div><div class="client-name">Salesforce</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#0066cc,#003366);font-size:0.85rem">JPM</div><div class="client-name">JPMorgan</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#1f2937,#374151);font-size:1rem">GS</div><div class="client-name">Goldman</div></div>
+                    <div class="client-logo-carousel"><div class="client-logo" style="background:linear-gradient(135deg,#003f5c,#00d4ff);font-size:0.85rem">BLK</div><div class="client-name">BlackRock</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <h2>What Our Clients Say</h2>
+            <p class="testimonials-subtitle">Trusted by enterprises across the globe</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card scroll-reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Vision Cloud transformed our IT operations. Their cloud migration was seamless and the cybersecurity team is world-class."</p>
+                    <div class="testimonial-author"><div class="author-avatar"></div><div class="author-info"><h4>Rajesh Kumar</h4><p>Operations Director, FinTech Corp</p></div></div>
+                </div>
+                <div class="testimonial-card scroll-reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The AI automation solutions saved us $2M annually. Best IT consulting investment we've ever made. Highly recommend!"</p>
+                    <div class="testimonial-author"><div class="author-avatar"></div><div class="author-info"><h4>Priya Sharma</h4><p>CTO, RetailChain Inc</p></div></div>
+                </div>
+                <div class="testimonial-card scroll-reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"24/7 support is exceptional. They resolved a critical network issue at 2AM without any downtime. Truly outstanding service."</p>
+                    <div class="testimonial-author"><div class="author-avatar"></div><div class="author-info"><h4>Amit Patel</h4><p>CEO, HealthCare Network</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="section-header"><h2>Frequently Asked Questions</h2><p>Everything you need to know about Vision Cloud</p></div>
+        <div class="faq-container">
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What industries do you serve?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>We serve a wide range of industries including Financial Services, Healthcare, Retail, Manufacturing, Education, and Government. Our team has deep expertise in industry-specific compliance and technology requirements.</p></div>
+            </div>
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>How quickly can you onboard our company?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>Typical onboarding takes 1–2 weeks depending on your infrastructure complexity. Our team begins with a discovery call, followed by a detailed assessment and a customized roadmap — all within the first week.</p></div>
+            </div>
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you offer a free consultation?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>Yes! We offer a free 30-minute consultation to understand your IT needs and recommend the best solutions. Simply click "Book a Free Consultation" and our team will reach out within 24 hours.</p></div>
+            </div>
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What cloud platforms do you support?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>We are certified partners with AWS, Microsoft Azure, and Google Cloud Platform. We help businesses choose the right platform, migrate workloads, and optimize cloud spend for maximum efficiency.</p></div>
+            </div>
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Is my data secure with Vision Cloud?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>Absolutely. We are ISO 27001 certified and SOC 2 compliant. All data is encrypted in transit and at rest. We follow zero-trust security principles and conduct regular penetration testing and audits.</p></div>
+            </div>
+            <div class="faq-item scroll-reveal">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I upgrade or downgrade my plan?</span><span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"><p>Yes, you can change your plan at any time. Upgrades take effect immediately and downgrades apply at the next billing cycle. Contact our team and we'll handle the transition seamlessly.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your IT?</h2>
+            <p>Let's talk about how Vision Cloud can modernize your infrastructure, secure your data, and accelerate your growth.</p>
+            <button class="btn-cta" onclick="openContactModal()">Book a Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>12800 Westridge Blvd, Suite 274</p>
+                <p>Frisco, TX 75035</p>
+                <p>United States</p>
+                <a href="tel:+12818130835">📞 +1 (281) 813-0835</a>
+                <a href="mailto:hr@visioncloudit.com">📧 hr@visioncloudit.com</a>
+            </div>
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#portfolio">Case Studies</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact-section">Contact Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Admin Panels</h3>
+                <a href="#" onclick="showAdminPanel('superAdmin'); return false;">Super Admin</a>
+                <a href="#" onclick="showAdminPanel('admin'); return false;">Admin Panel</a>
+                <a href="#" onclick="showAdminPanel('moderator'); return false;">Moderator</a>
+                <a href="#" onclick="showAdminPanel('user'); return false;">User Login</a>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for IT insights and Vision Cloud updates.</p>
+                <div class="footer-newsletter">
+                    <input type="email" id="newsletterEmail" placeholder="your@email.com">
+                    <button onclick="handleNewsletter()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="https://linkedin.com/company/visioncloudit" target="_blank" class="social-link" title="LinkedIn">in</a>
+                <a href="https://twitter.com/visioncloudit" target="_blank" class="social-link" title="Twitter/X">𝕏</a>
+                <a href="https://facebook.com/visioncloudit" target="_blank" class="social-link" title="Facebook">f</a>
+                <a href="https://instagram.com/visioncloudit" target="_blank" class="social-link" title="Instagram">📷</a>
+                <a href="https://youtube.com/@visioncloudit" target="_blank" class="social-link" title="YouTube">▶</a>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Home</a>
+                <a href="#services">Services</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact-section">Contact</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p>© 2026 Vision Cloud. All rights reserved. Enterprise IT Consulting Solutions.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <button id="back-to-top" onclick="scrollToTop()" title="Back to top">↑</button>
+    <a id="whatsapp-btn" href="https://wa.me/12818130835" target="_blank" title="Chat on WhatsApp">
+        <span class="whatsapp-tooltip">Chat with us!</span>💬
+    </a>
+
+    <!-- AI CHATBOT -->
+    <button id="chat-toggle" onclick="toggleChat()">
+        🤖<span class="chat-badge">1</span>
+    </button>
+    <div id="chatbot">
+        <div class="chat-header">
+            <div class="chat-header-avatar">🤖</div>
+            <div class="chat-header-info">
+                <h4>Vision Cloud AI</h4>
+                <p><span class="chat-online"></span>Online — replies instantly</p>
+            </div>
+            <button class="chat-close-btn" onclick="closeChat()">✕</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot">👋 Hi! I'm the Vision Cloud AI Assistant. How can I help you today?</div>
+            <div class="chat-msg bot">I can answer questions about our services, pricing, and more!</div>
+        </div>
+        <div class="chat-quick-replies" id="chat-quick-replies">
+            <button class="quick-reply" onclick="sendMessage('Tell me about your services')">Our Services</button>
+            <button class="quick-reply" onclick="sendMessage('What are your pricing plans?')">Pricing</button>
+            <button class="quick-reply" onclick="sendMessage('How can I contact you?')">Contact</button>
+            <button class="quick-reply" onclick="sendMessage('I want a demo')">Book Demo</button>
+        </div>
+        <div class="chat-input-area">
+            <input class="chat-input" id="chat-input" type="text" placeholder="Type your message..." onkeydown="handleChatKey(event)">
+            <button class="chat-send" onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner">
+        <p class="cookie-text">🍪 We use cookies to enhance your experience. By continuing, you agree to our <a href="#">Privacy Policy</a>.</p>
+        <div class="cookie-btns">
+            <button class="cookie-accept" onclick="acceptCookie()">Accept All</button>
+            <button class="cookie-decline" onclick="declineCookie()">Decline</button>
+        </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Welcome Back</h2>
+            <p style="color:var(--text-secondary);margin-bottom:1.5rem">Sign in to your Vision Cloud account</p>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group"><label>Email Address</label><input type="email" id="login-email" placeholder="your@email.com" required></div>
+                <div class="form-group"><label>Password</label><input type="password" id="login-password" placeholder="Enter password" required></div>
+                <button type="submit" class="form-button">Sign In</button>
+            </form>
+            <div class="toggle-link"><a onclick="openForgotPasswordModal()">Forgot password?</a></div>
+            <div style="text-align:center;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--glass-border)">
+                <p style="color:var(--text-secondary);margin-bottom:1rem">New to Vision Cloud?</p>
+                <button class="btn-secondary" onclick="openSignupModal()">Create Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORGOT PASSWORD MODAL -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+            <h2>Reset Password</h2>
+            <p style="color:var(--text-secondary);margin-bottom:1.5rem">Enter your email to receive a recovery link</p>
+            <form id="forgotPasswordForm" onsubmit="handleForgotPassword(event)">
+                <div class="form-group"><label>Email Address</label><input type="email" id="reset-email" placeholder="your@email.com" required></div>
+                <button type="submit" class="form-button">Send Recovery Email</button>
+            </form>
+            <div class="toggle-link"><a onclick="backToLogin()">← Back to Login</a></div>
+            <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);padding:1.2rem;border-radius:12px;margin-top:1.5rem">
+                <p style="color:#10b981;font-size:0.88rem"><strong>ℹ️ Recovery link expires in 24 hours.</strong> Check your inbox including spam.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNUP MODAL -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Create Account</h2>
+            <p style="color:var(--text-secondary);margin-bottom:1.5rem">Join Vision Cloud today — it's free</p>
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                    <div class="form-group"><label>First Name</label><input type="text" id="signup-firstname" placeholder="John" required></div>
+                    <div class="form-group"><label>Last Name</label><input type="text" id="signup-lastname" placeholder="Doe" required></div>
+                </div>
+                <div class="form-group"><label>Email Address</label><input type="email" id="signup-email" placeholder="your@email.com" required></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" id="signup-phone" placeholder="+1 (555) 000-0000"></div>
+                <div class="form-group"><label>Company / Organization</label><input type="text" id="signup-company" placeholder="Your Company Name"></div>
+                <div class="form-group"><label>Password</label><input type="password" id="signup-password" placeholder="Min. 8 characters" required minlength="8"></div>
+                <div class="form-group"><label>Confirm Password</label><input type="password" id="signup-confirm" placeholder="Re-enter password" required minlength="8"></div>
+                <div style="display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1.5rem">
+                    <input type="checkbox" id="signup-terms" required style="margin-top:3px;accent-color:var(--accent-terracotta);width:16px;height:16px;cursor:pointer;flex-shrink:0">
+                    <label for="signup-terms" style="color:var(--text-secondary);font-size:0.88rem;cursor:pointer">I agree to the <a href="#" style="color:var(--accent-gold)">Terms of Service</a> and <a href="#" style="color:var(--accent-gold)">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="form-button">Create My Account</button>
+            </form>
+            <div id="signup-success" style="display:none;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);padding:1.5rem;border-radius:14px;text-align:center;margin-top:1rem">
+                <p style="color:#10b981;font-size:1.05rem;font-weight:700">🎉 Account Created Successfully!</p>
+                <p style="color:var(--text-secondary);margin-top:0.5rem;font-size:0.88rem">Welcome to Vision Cloud. Redirecting to login...</p>
+            </div>
+            <div style="text-align:center;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--glass-border)">
+                <p style="color:var(--text-secondary)">Already have an account? <a onclick="switchToLogin()" style="color:var(--accent-gold);cursor:pointer;font-weight:700">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT MODAL -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Get In Touch</h2>
+            <p style="color:var(--text-secondary);margin-bottom:1.5rem">We're here to help. Fill in your details below.</p>
+            <form id="contactForm" action="https://formspree.io/f/hr@visioncloudit.com" method="POST" onsubmit="handleContact(event)">
+                <input type="hidden" name="_subject" value="New Inquiry from Vision Cloud Website">
+                <input type="hidden" name="_replyto" id="form-reply-email">
+                <div class="form-group"><label>Full Name</label><input type="text" id="contact-name" placeholder="John Doe" required></div>
+                <div class="form-group"><label>Email Address</label><input type="email" id="contact-email" placeholder="your@email.com" required></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" id="contact-phone" placeholder="+1 (555) 000-0000"></div>
+                <div class="form-group"><label>Subject</label>
+                    <select id="contact-subject" required>
+                        <option value="">Select a subject</option>
+                        <option>Cloud Infrastructure</option>
+                        <option>Cybersecurity</option>
+                        <option>AI & Automation</option>
+                        <option>IT Support</option>
+                        <option>Pricing & Plans</option>
+                        <option>Partnership</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Message</label><textarea id="contact-message" placeholder="Tell us how we can help..." required></textarea></div>
+                <button type="submit" class="form-button">Send Message</button>
+            </form>
+            <div class="contact-info" style="margin-top:2rem">
+                <h3 style="font-size:1.1rem;background:var(--gradient-sunset);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem">📍 Our Address</h3>
+                <div class="contact-detail"><div class="contact-detail-icon">🏢</div><div class="contact-detail-text">12800 Westridge Blvd, Suite 274<br>Frisco, TX 75035<br>United States</div></div>
+                <div class="contact-detail"><div class="contact-detail-icon">📞</div><div class="contact-detail-text"><a href="tel:+12818130835">+1 (281) 813-0835</a></div></div>
+                <div class="contact-detail"><div class="contact-detail-icon">📧</div><div class="contact-detail-text"><a href="mailto:hr@visioncloudit.com">hr@visioncloudit.com</a></div></div>
+                <div class="contact-detail"><div class="contact-detail-icon">🕐</div><div class="contact-detail-text"><strong>Mon–Fri:</strong> 9AM–6PM &nbsp;|&nbsp; <strong>Sat:</strong> 10AM–4PM &nbsp;|&nbsp; <strong>Sun:</strong> Closed</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN PANELS -->
+    <div id="superAdminPanelContainer" class="admin-panel-container">
+        <div class="admin-header"><div class="admin-logo">🔐 Super Admin</div><button class="admin-back-btn" onclick="hideAdminPanel()">← Back to Main</button></div>
+        <div class="admin-content">
+            <div class="admin-panel-header"><h1>🔐 Super Admin Panel</h1><p>Enterprise-level system administration</p></div>
+            <div class="admin-login-container">
+                <h2>System Access</h2><p class="admin-login-description">Enter your super admin credentials</p>
+                <form onsubmit="handleSuperAdminLogin(event)">
+                    <div class="admin-security-badge">🔒 Enterprise Security Active</div>
+                    <div class="admin-form-group"><label>Admin ID</label><input type="text" placeholder="ADM-XXXX-XXXX" required></div>
+                    <div class="admin-form-group"><label>Corporate Email</label><input type="email" placeholder="admin@visioncloudit.com" required></div>
+                    <div class="admin-form-group"><label>Master Password</label><input type="password" placeholder="Enter master password" required></div>
+                    <div class="admin-form-group"><label>Two-Factor Code</label><input type="text" placeholder="000000" maxlength="6" required></div>
+                    <div class="admin-checkbox-group"><input type="checkbox" required><label>I agree to security protocols</label></div>
+                    <button type="submit" class="admin-form-button">🔓 Unlock System</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="adminPanelContainer" class="admin-panel-container">
+        <div class="admin-header"><div class="admin-logo">⚙️ Admin Panel</div><button class="admin-back-btn" onclick="hideAdminPanel()">← Back to Main</button></div>
+        <div class="admin-content">
+            <div class="admin-panel-header"><h1>⚙️ Admin Panel</h1><p>Team management and operations</p></div>
+            <div class="admin-login-container">
+                <h2>Admin Access</h2><p class="admin-login-description">Sign in to your dashboard</p>
+                <form onsubmit="handleAdminLogin(event)">
+                    <div class="admin-security-badge">🔒 Secure Connection</div>
+                    <div class="admin-form-group"><label>Admin Email</label><input type="email" placeholder="admin@company.com" required></div>
+                    <div class="admin-form-group"><label>Password</label><input type="password" placeholder="Enter password" required></div>
+                    <div class="admin-form-group"><label>Department</label><select required><option value="">Select department</option><option>Operations</option><option>Finance</option><option>HR</option><option>IT</option><option>Sales</option></select></div>
+                    <button type="submit" class="admin-form-button">📊 Access Dashboard</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="moderatorPanelContainer" class="admin-panel-container">
+        <div class="admin-header"><div class="admin-logo">📋 Moderator Panel</div><button class="admin-back-btn" onclick="hideAdminPanel()">← Back to Main</button></div>
+        <div class="admin-content">
+            <div class="admin-panel-header"><h1>📋 Moderator Panel</h1><p>Content management and monitoring</p></div>
+            <div class="admin-login-container">
+                <h2>Moderator Access</h2><p class="admin-login-description">Access moderation dashboard</p>
+                <form onsubmit="handleModeratorLogin(event)">
+                    <div class="admin-security-badge">✅ Standard Security</div>
+                    <div class="admin-form-group"><label>Username</label><input type="text" placeholder="your.username" required></div>
+                    <div class="admin-form-group"><label>Password</label><input type="password" placeholder="Enter password" required></div>
+                    <div class="admin-form-group"><label>Role</label><select required><option value="">Select role</option><option>Content Moderator</option><option>Community Manager</option><option>Support Team</option><option>Quality Assurance</option></select></div>
+                    <button type="submit" class="admin-form-button">🎯 Access Board</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="userPanelContainer" class="admin-panel-container">
+        <div class="admin-header"><div class="admin-logo">👤 User Portal</div><button class="admin-back-btn" onclick="hideAdminPanel()">← Back to Main</button></div>
+        <div class="admin-content">
+            <div class="admin-panel-header"><h1>👤 User Portal</h1><p>Access your workspace</p></div>
+            <div class="admin-login-container">
+                <h2>User Login</h2><p class="admin-login-description">Sign in to your account</p>
+                <form onsubmit="handleUserLogin(event)">
+                    <div class="admin-security-badge">🔐 Your account is secure</div>
+                    <div class="admin-form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" required></div>
+                    <div class="admin-form-group"><label>Password</label><input type="password" placeholder="Enter password" required></div>
+                    <div class="admin-checkbox-group"><input type="checkbox"><label>Remember me</label></div>
+                    <button type="submit" class="admin-form-button">🚀 Enter Workspace</button>
+                </form>
+                <div class="admin-form-footer">Don't have an account? <a onclick="hideAdminPanel(); openSignupModal()">Create one</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
